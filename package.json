@@ -1,0 +1,20 @@
+{
+  "name": "drummer",
+  "version": "1.0.0",
+  "description": "A virtual drum machine on the web to make beats of your own",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Monthly-Music-Hackathon-NYC/drummer.git"
+  },
+  "keywords": [],
+  "author": "Junjie Chen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Monthly-Music-Hackathon-NYC/drummer/issues"
+  },
+  "homepage": "https://github.com/Monthly-Music-Hackathon-NYC/drummer#readme"
+}
