@@ -1,7 +1,7 @@
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
-  entry: ['./client/index.js', './client/style.scss'],
+  entry: ['@babel/polyfill', './client/index.js', './client/style.scss'],
   output: {
     path: __dirname,
     filename: './public/bundle.js'
@@ -12,15 +12,14 @@ module.exports = {
       {
         test: /\.jsx?$/,
         exclude: /node_modules/,
-        loader: 'babel-loader',
-        options: {
-          presets: ['react', 'es2015']
-        }
+        loader: 'babel-loader'
       },
-      // use the style-loader/sass-loader combos for anything matching the .scss extension
       {
         test: /\.scss$/,
-        loader: ExtractTextPlugin.extract(['style-loader', 'sass-loader'])
+        use: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: ['css-loader', 'sass-loader']
+        })
       }
     ]
   },
