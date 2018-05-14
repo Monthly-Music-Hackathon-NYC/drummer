@@ -3,6 +3,6 @@
   "parser": "babel-eslint",
   "root": true,
   "rules": {
-    "semi": 1
+    "semi": [1, "always"]
   }
 }
