@@ -4,6 +4,8 @@
   "description": "A virtual drum machine on the web to make beats of your own",
   "main": "index.js",
   "scripts": {
+    "build-client": "webpack -w",
+    "lint": "eslint ./ --ignore-path .gitignore",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
